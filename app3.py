@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 
 st.title("Object recognizer using CIFAR-10 Dataset")
 st.write("Made by Yashas Jain")
-liss = ['Plane','Bird','Car','Cat','Deer','Dog','Frog','Horse','Ship','Truck']
+liss = ['Plane','Car','Bird','Cat','Deer','Dog','Frog','Horse','Ship','Truck']
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
