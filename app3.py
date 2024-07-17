@@ -18,7 +18,8 @@ if uploaded_file is not None:
     image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
 
     if image_array.shape == (1, 32, 32, 3):  # Check the shape with batch dimension
-        st.write("The image has been successfully converted to a 32x32x3 array.")
+        st.write('This model can detect Automobile, Car, Plane, Bird, Dog, Deer, Frog, Horse, Ship, Truck.')
+        st.write("The image you uploaded is of a.......")
         
         # Load the deep learning model
         loaded_model = load_model('model_aug.h5')
@@ -36,7 +37,38 @@ if uploaded_file is not None:
                 maxx = result[i]
                 indexx = i
 
-        st.write(liss[indexx])
+        st.header(liss[indexx])
     else:
         st.write(f"The image array shape is: {image_array.shape}. It may not be a color image.")
 
+#st.bottom("For internships related to machine learning and data science kindly email me at yashasjain247@gmail.com or contact me via Whatsapp")
+
+
+footer="""<style>
+a:link , a:visited{
+color: blue;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Contact me through email - yashasjain247@gmail.com</p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
