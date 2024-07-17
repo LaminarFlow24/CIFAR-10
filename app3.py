@@ -18,7 +18,7 @@ if uploaded_file is not None:
     image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
 
     if image_array.shape == (1, 32, 32, 3):  # Check the shape with batch dimension
-        st.write('This model can detect Automobile, Car, Plane, Bird, Dog, Deer, Frog, Horse, Ship, Truck.')
+        st.write('This model can detect Automobile, Cat, Plane, Bird, Dog, Deer, Frog, Horse, Ship, Truck.')
         st.write("The image you uploaded is of a.......")
         
         # Load the deep learning model
