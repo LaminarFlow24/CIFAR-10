@@ -5,6 +5,7 @@ from tensorflow.keras.models import load_model
 
 st.title("Object recognizer using CIFAR-10 Dataset")
 st.write("Made by Yashas Jain")
+st.write('This model can detect Automobile, Cat, Plane, Bird, Dog, Deer, Frog, Horse, Ship, Truck.')
 liss = ['Plane','Car','Bird','Cat','Deer','Dog','Frog','Horse','Ship','Truck']
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -18,7 +19,7 @@ if uploaded_file is not None:
     image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
 
     if image_array.shape == (1, 32, 32, 3):  # Check the shape with batch dimension
-        st.write('This model can detect Automobile, Cat, Plane, Bird, Dog, Deer, Frog, Horse, Ship, Truck.')
+        
         st.write("The image you uploaded is of a.......")
         
         # Load the deep learning model
@@ -39,7 +40,7 @@ if uploaded_file is not None:
 
         st.header(liss[indexx])
     else:
-        st.write(f"The image array shape is: {image_array.shape}. It may not be a color image.")
+        st.write(f"The image array shape is: {image_array.shape}. It may not be a color image. Please try some other image.")
 
 #st.bottom("For internships related to machine learning and data science kindly email me at yashasjain247@gmail.com or contact me via Whatsapp")
 
