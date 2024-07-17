@@ -1,4 +1,4 @@
-To see the output of the model on website kindly visit -:
+The CNN is deployed on this web page, kindly check it out -:
 
 https://yashascifar.streamlit.app/
 
